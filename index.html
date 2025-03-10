@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Spammer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webhook Spammer</h1>
+        <label for="webhook">Webhook URL:</label>
+        <input type="text" id="webhook" placeholder="Enter Discord webhook URL">
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Enter your message here"></textarea>
+
+        <label for="threads">Threads:</label>
+        <input type="number" id="threads" value="1" min="1">
+
+        <label for="delay">Delay (seconds):</label>
+        <input type="number" id="delay" value="0.01" step="0.01" min="0.01">
+
+        <button id="start">Start Spam</button>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
