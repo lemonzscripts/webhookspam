@@ -3,6 +3,7 @@ document.getElementById('start').addEventListener('click', function() {
     let message = document.getElementById('message').value;
     let threads = document.getElementById('threads').value;
     let delay = document.getElementById('delay').value;
+    let count = 0;
 
     if (!webhookURL || !message) {
         alert("Please enter a webhook URL and a message!");
@@ -18,7 +19,8 @@ document.getElementById('start').addEventListener('click', function() {
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('output').innerHTML += "Message sent!<br>";
+                count++;
+                document.getElementById('output').innerHTML = `Message sent (${count}x)`;
             })
             .catch(error => console.error("Error:", error));
         }, delay * 1000);
